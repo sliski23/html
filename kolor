@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>Zadanie kolory</title>
+	<style>
+	div{
+		width:200px;
+		height:200px;
+		position: relative;
+		opacity:0,6;
+		}
+	.czerwony{background:rgb(255,0,0)}
+	.zielony{background:rgb(0,0,255)}
+	.niebieski{background:rgb(0,255,0)}
+	#red{
+	background: red;
+	left:50px;
+	top:50px;
+	z-index:1;
+
+	}
+	#green{
+	background: green;
+	left:75px;
+	top:70px;
+	z-index:2;
+	}
+	#blue{
+	background: blue;
+	left:100px;
+	top:100px;
+	z-index:2;
+	}
+</style>	
+</head>
+<body>
+
+
+
+
+
+		<div onClick"goUp()" class="czerwony"id="red"></div>
+		<div onClick"goUp()" class="zielony"id="green"></div>
+		<div onClick"goUp()" class="niebieski"id="blue"></div>
+		
+		<script>
+			function goUp(){
+				console.log(this)
+				}
+				
+		</script>
+</body>
+</html>
+		
