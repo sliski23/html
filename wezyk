@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>Zadanie </title>
+	</head>
+	<style>
+	span{
+	position:relative;
+	
+	}
+	
+	</style>
+	<body>
+	
+	<h1>
+	<span style="top:10px">W</span>
+	<span style="top:20px">Ę</span>
+	<span style=";top:10px">Ż</span>
+	<span style="top:0px">Y</span>
+	<span style="top:-10px">K</span>
+	<span style="top:-0px">I</span>
+	<span style="top:10px">E</span>
+	<span style="top:20px">M</span>
+	</h1>
+	
+	<script>
+	
+	
+	</script>
+	</body>
+	</html>
