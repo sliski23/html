@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide-button {
+            display: none;    
+        }
+        .show-button {
+            display: inline-block;
+        }
+		body{
+		text-align:center;background-color:lightblue;}
+	
+    </style>
+</head>
+<body>
+    <div>gracz1: <span id="player1"></span></div>
+    <div>gracz2: <span id="player2"></span></div>
+    <button id="start-game-button" onclick="startGame()">start</button>
+    <button id="draw-button" onclick="losuj()" class="hide-button">losuj</button>
+    <script>
+        const drawButton = document.getElementById("draw-button");
+        const startGameButton = document.getElementById("start-game-button");
+        let hasGameEnded = false;
+
+        function startGame() {
+            const interval = setTimeout(endGame, 5000);
+            drawButton.className = "show-button";
+            startGameButton.className = "hide-button";
+        }
+
+        function endGame() {
+            hasGameEnded = true;
+            alert(`Wygrał gracz ${player1Score > player2Score ? 'nr 1' : 'nr 2'} gracz nr 1 pkt = ${player1Score} gracz nr 2 pkt = ${player2Score}`)
+        }
+
+        const player1 = document.getElementById("player1");
+        const player2 = document.getElementById("player2");
+        let player1Score = 0;
+        let player2Score = 0;
+        function losuj() {
+			 
+            if (hasGameEnded) {
+                return
+            }
+            const currentPlayer1Score = getRandomInt(1, 6);
+            player1Score += currentPlayer1Score;
+            const currentPlayer2Score = getRandomInt(1, 6);
+            player2Score += currentPlayer2Score;
+            player1.innerHTML = `<img src="kostka${currentPlayer1Score}.png">`;
+			 player2.innerHTML = `<img src="kostka${currentPlayer2Score}.png">`;
+			
+            player2.innerHTML = `<b>${currentPlayer2Score}</b>`;
+            console.log(`Player1 ${player1Score}`)
+            console.log(`Player2 ${player2Score}`)
+			
+        }
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * max) + min;
+        }
+    </script>
+</body>
+</html>
