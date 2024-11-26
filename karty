@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cards {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .card {
+            position:relative;
+            width: 10em;
+            height: 15em;
+            margin: 10px;
+            border-radius: 0.5em;
+            box-shadow: 5px 5px 10px #0003;
+            border:1px inset #0001;
+        }
+        .header{
+            position:absolute;
+            padding:.5em;
+            font-size:1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:0;
+            flex-direction:column;
+        }
+        .flipped{
+            transform: rotate(180deg);
+            bottom:0;
+            right:0;
+        }
+        .big{
+            font-size:4em;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="cards">
+        <div class="card">
+            <div class="header">
+                <div>A</div>
+                <div>&spades;</div>
+            </div>
+            <div class="header flipped">
+                <div>A</div>
+                <div>&spades;</div>
+            </div>
+            <div class="content">
+                <div class="big">&spades;</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <div>7</div>
+                <div>&spades;</div>
+            </div>
+            <div class="header flipped">
+                <div>7</div>
+                <div>&spades;</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <div>10</div>
+                <div>&spades;</div>
+            </div>
+            <div class="header flipped">
+                <div>10</div>
+                <div>&spades;</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
